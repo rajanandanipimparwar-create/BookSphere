@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BookSphere - read free, buy and sell books</title>
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="top"><a class="logo" href="#/">📖 BookSphere</a>
+<nav id="nav"><a href="#/">Home</a><a href="#/browse">Browse Books</a><a href="#/dashboard">My Library</a><a href="#/market">Buy &amp; Sell</a></nav>
+<form class="sbox" onsubmit="location.hash='#/browse?q='+encodeURIComponent(this.q.value);return false"><input name="q" placeholder="Search books…"></form>
+<span id="acct"></span></header>
+<main id="app"></main><div id="toast"></div>
+<script src="app.js"></script></body></html>
