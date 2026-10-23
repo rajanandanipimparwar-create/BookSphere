@@ -214,7 +214,7 @@ async function apiRoute(req, res, u, p) {
         { signal: AbortSignal.timeout(15000) }
       );
 
-      if (!r.ok) throw new Error('Catalog unavailable');
+       if (!r.ok) {   console.error('Gutendex HTTP status:', r.status);   console.error('Gutendex response:', await r.text());   throw new Error('Catalog unavailable: HTTP ' + r.status); }
 
       const d = await r.json();
 
