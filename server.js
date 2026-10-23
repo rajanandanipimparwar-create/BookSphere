@@ -235,8 +235,11 @@ async function apiRoute(req, res, u, p) {
       } catch {}
 
       return send(res, 200, out);
-    } catch {
+   
+    } catch (err) {
+      console.error('Gutendex API error:', err);
       let local = [];
+
 
       try {
         local = JSON.parse(
