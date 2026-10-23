@@ -211,7 +211,7 @@ async function apiRoute(req, res, u, p) {
     try {
       const r = await fetch(
         'https://gutendex.com/books?' + q,
-        { signal: AbortSignal.timeout(5000) }
+        { signal: AbortSignal.timeout(15000) }
       );
 
       if (!r.ok) throw new Error('Catalog unavailable');
